@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+// fluid typography from css-trick: https://css-tricks.com/snippets/css/fluid-typography/
+@mixin size_manager($fontSizeMin, $fontSizeMax, $viewportMin, $viewportMax) {
+  font-size: calc(
+    (#{$fontSizeMax} - #{$fontSizeMin}) *
+      ((100vw - #{$viewportMin}px) / (#{$viewportMax} - #{$viewportMin})) + #{$fontSizeMin}px
+  );
+}

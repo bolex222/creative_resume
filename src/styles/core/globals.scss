@@ -1,0 +1,38 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Aventine, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+html {
+  @include size_manager(
+    $font-size_base_ul,
+    $font-size_high_ul,
+    $fluid-typo-vp-min-size_ul,
+    $viewport-medium_ul
+  );
+
+  -webkit-marquee-increment: 0vw; // fix from https://www.sarasoueidan.com/blog/safari-fluid-typography-bug-fix/
+}
+
+@include medium_and_larger_viewport {
+  html {
+    @include size_manager(
+      $font-size_low_ul,
+      $font-size_base_ul,
+      $viewport-medium_ul,
+      $viewport-large_ul
+    );
+  }
+}

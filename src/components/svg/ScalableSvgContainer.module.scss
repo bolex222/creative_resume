@@ -1,0 +1,15 @@
+.wrapper {
+  display: block;
+  box-sizing: content-box;
+
+  svg {
+    padding-bottom: 100%;
+    height: 1px;
+    overflow: visible;
+    box-sizing: content-box;
+
+    .path {
+      box-sizing: content-box;
+    }
+  }
+}

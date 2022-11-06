@@ -1,0 +1,28 @@
+$font-size_base_ul: 16;
+$font-size_low_ul: 10;
+$font-size_high_ul: 32;
+
+$viewport-thin_ul: 480;
+$viewport-medium_ul: 768;
+$viewport-regular_ul: 1024;
+$viewport-large_ul: 1440;
+
+$fluid-typo-vp-min-size_ul: 375;
+
+$font-size_base: $font-size_base_ul * 1px;
+$font-size_low: $font-size_low_ul * 1px;
+$font-size_high: $font-size_high_ul * 1px;
+
+$viewport-thin: $viewport-thin_ul * 1px;
+$viewport-medium: $viewport-medium_ul * 1px;
+$viewport-regular: $viewport-regular_ul * 1px;
+$viewport-large: $viewport-large_ul * 1px;
+
+$fluid-typo-vp-min-size: $fluid-typo-vp-min-size_ul * 1px;
+
+$color_dark: #000;
+$color_redish: #591940;
+$color_light: rgba(239, 239, 239, 0.82);
+$color_purple: #310D3D;
+$color_blueish: #1D2F6F;
+$color_greyishWhite: #E2E6FA;
