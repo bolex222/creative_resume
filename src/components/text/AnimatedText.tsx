@@ -10,8 +10,7 @@ type Props = {
 const AnimatedText = ({text, className}: Props) => {
     const arrayOfWord: Array<string> = text.split(' ')
     const matrixOfText: Array<Array<string>> = arrayOfWord.map(e =>
-        e.split('')
-    )
+        e.split(''))
 
     let globalIndex = 0
 
@@ -20,10 +19,9 @@ const AnimatedText = ({text, className}: Props) => {
             {matrixOfText.map((word, index) => {
                 return (
                     <div className={styles.rowLetterContainer} key={`${index}_key`}>
-                        {word.map((letter, letterIndex) => {
+                        {word.map((letter) => {
                             globalIndex ++;
                             return (
-
                                 <LetterFromTheBottom key={`${globalIndex}_letter`} letterIndex={globalIndex} className={styles.independentLetter}>
                                     {letter === ' ' ? <>&nbsp;</> : <>{letter}</>}
                                 </LetterFromTheBottom>
