@@ -13,7 +13,7 @@ const LetterFromTheBottom = ({letterIndex, children}: Props) => {
     const letterSpan = useRef(null)
 
     useLayoutEffect(() => {
-        let ctx = gsap.context(() => {
+        const ctx = gsap.context(() => {
             gsap.to(letterSpan.current, {translateY: '0', rotate: '0', opacity: 1, duration: 0.5, ease: 'power1.out', delay: letterIndex / 40})
         })
         return () => ctx.revert()

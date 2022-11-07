@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import HeroSection from "./Hero/HeroSection";
 
 const HomePage = () => {

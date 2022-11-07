@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-// import './styles/main.scss'
+import React from "react";
 import './App.scss'
 import HomePage from "./pages/home/HomePage";
 
