@@ -1,0 +1,12 @@
+.husky
+node_modules
+src/public/*
+.eslintrc.json
+.gitignore
+.prettierignore
+.prettierrc.json
+package-lock.json
+README.md
+tsconfig.node.json
+tsconfig.json
+vite.config.ts
