@@ -1,4 +1,17 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+
+# check lint and format
 npx lint-staged
+
+echo 'Lint and format are alright. 👍';
+
+# check if build work
+npm run build ||
+(
+  echo '👷🚧 build failed!! 🚧👷‍'
+  false;
+)
+
+echo '✅✅ Everything seems to be alright ✅✅'
