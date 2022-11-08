@@ -1,3 +1,13 @@
 .yearSvg {
-  margin-left: rem(9px);
+  //margin-left: rem(9px);
+  width: rem(157px);
+  //height="69"
+}
+
+@include medium_and_larger_viewport {
+  .yearSvg {
+    width: rem(220px);
+    margin-top: auto;
+    margin-bottom: rem(9px);
+  }
 }

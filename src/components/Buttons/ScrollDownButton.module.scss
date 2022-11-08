@@ -32,3 +32,9 @@
   width: rem(69px);
   fill: $color-light;
 }
+
+@include medium_and_larger_viewport {
+  .scrollCircleWrapper {
+    margin-top: rem(75px);
+  }
+}

@@ -5,3 +5,11 @@
   top: rem(81px);
   right: rem(-156px);
 }
+
+@include medium_and_larger_viewport {
+  .loopShape {
+    width: rem(800px);
+    top: rem(90px);
+    right: rem(-300px);
+  }
+}

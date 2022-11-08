@@ -1,8 +1,21 @@
 .independentLetter {
   font-family: 'Aventine', sans-serif;
+  height: 200%;
 }
 
 .rowLetterContainer {
   overflow: hidden;
   height: rem(68px);
+}
+
+@include medium_and_larger_viewport {
+  .rowLetterContainer {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+  }
+
+  .independentLetter {
+    height: auto;
+  }
 }

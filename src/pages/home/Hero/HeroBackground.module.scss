@@ -1,0 +1,58 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: #000;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.blurBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: saturate(150%) blur(10rem);
+  z-index: 2;
+}
+
+.purpleSvg,
+.blueSvg {
+  position: absolute;
+  z-index: 1;
+}
+
+.blueSvg {
+  position: absolute;
+  width: rem(407.83px);
+  height: rem(473.28px);
+  left: rem(-144px);
+  top: rem(-68px);
+}
+
+.purpleSvg {
+  width: rem(308px);
+  height: rem(273px);
+  right: rem(-69px);
+  bottom: rem(75px);
+}
+
+@include medium_and_larger_viewport {
+  .blueSvg {
+    position: absolute;
+    width: rem(746px);
+    height: rem(845px);
+    left: rem(0px);
+  }
+
+  .purpleSvg {
+    width: rem(713px);
+    height: rem(632px);
+    bottom: rem(0px);
+  }
+}

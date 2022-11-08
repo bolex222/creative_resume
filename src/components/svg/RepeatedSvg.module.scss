@@ -7,3 +7,9 @@
 
   transform: rotate(-47.42deg);
 }
+
+@include medium_and_larger_viewport {
+  .repeatedShape {
+    width: rem(1040px);
+  }
+}

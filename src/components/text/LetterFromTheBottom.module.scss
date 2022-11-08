@@ -1,6 +1,15 @@
 .letter {
-    display: inline-block;
+  display: inline-block;
   transform: translateY(150%) rotate(-90deg);
   opacity: 0;
+  height: 200%;
   //overflow: visible;
+}
+
+@include medium_and_larger_viewport {
+  .letter {
+    height: rem(107px);
+    line-height: rem(130px);
+    overflow-y: hidden;
+  }
 }
