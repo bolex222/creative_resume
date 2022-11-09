@@ -3,6 +3,7 @@
 
   height: 100vh;
   width: 100vw;
+  max-width: 100%;
 }
 
 .repeatedSvgContainer {
@@ -29,6 +30,11 @@
 
 .headline {
   display: none;
+  overflow-y: hidden;
+}
+
+.headlineContent {
+  display: inline-block;
 }
 
 .grainyOverlay {
@@ -92,5 +98,6 @@
   .yearSvgWrapper {
     grid-column: 3;
     display: flex;
+    overflow-y: hidden;
   }
 }
