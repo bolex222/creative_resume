@@ -1,6 +1,6 @@
 import React from 'react'
-import HeroSection from './Hero/HeroSection'
-import AboutMeSection from '@/pages/home/AboutMeSection/AboutMeSection'
+import HeroSection from '../../sections/Hero/HeroSection'
+import AboutMeSection from '@/sections/AboutMeSection/AboutMeSection'
 
 import styles from './HomePage.module.scss'
 

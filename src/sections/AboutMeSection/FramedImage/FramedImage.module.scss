@@ -44,3 +44,12 @@
   rotate: 3deg;
   z-index: 1;
 }
+
+@include medium_and_larger_viewport {
+  .framesWrapper {
+    width: rem(367px);
+
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+}

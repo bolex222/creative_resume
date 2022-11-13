@@ -3,13 +3,17 @@ import { Color } from '@/type/globalTypes'
 import SectionHeading from '@/components/text/SectionHeading/SectionHeading'
 import GrainyOverlay from '@/components/GrainyOverlay/GrainyOverlay'
 import styles from './AboutMeSection.module.scss'
-import FramedImage from '@/pages/home/AboutMeSection/FramedImage/FramedImage'
+import FramedImage from '@/sections/AboutMeSection/FramedImage/FramedImage'
 
 const AboutMeSection = () => {
   return (
     <section className={styles.aboutMeSection}>
       <GrainyOverlay />
-      <SectionHeading heading="About me" color={Color.blueish} />
+      <SectionHeading
+        containerClassName={styles.sectionHeadingContainer}
+        heading="About me"
+        color={Color.blueish}
+      />
       <p className={styles.aboutMeParagraph}>
         <span>Hi !</span> I’m Basile, a French IT engineer student interested in
         creative frontend development. I am currently looking for a 6 months
