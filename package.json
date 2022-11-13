@@ -7,7 +7,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "npx eslint . --ext .ts,.tsx",
-    "format": "npx prettier --write --ignore-unknown .",
+    "format": "npx prettier --write --igno  re-unknown .",
     "prepare": "husky install"
   },
   "dependencies": {

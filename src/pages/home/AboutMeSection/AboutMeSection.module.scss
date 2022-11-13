@@ -1,0 +1,24 @@
+.aboutMeSection {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background-color: $color-greyishWhite;
+}
+
+.aboutMeParagraph {
+  width: rem(340px);
+  margin-inline: auto;
+  margin-top: rem(53px);
+
+  font-family: 'Aventine', sans-serif;
+  font-weight: 500;
+  font-size: rem(24px);
+  color: $color-blueish;
+
+  span {
+    font-size: rem(36px);
+    display: inline-block;
+    width: 100%;
+  }
+}

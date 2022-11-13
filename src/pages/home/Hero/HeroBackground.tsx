@@ -15,12 +15,8 @@ const HeroBackground = () => {
     if (blueSvg.current && purpleSvg.current && backgroundRef.current) {
       const normalizedHorizontalMousePosition: number =
         event.x / backgroundRef.current.offsetWidth
-      // const normalizedHorizontalMousePosition: number =
-      //   Math.abs(event.x / backgroundRef.current.offsetWidth - 0.5)
       const normalizedVerticalMousePosition: number =
         event.y / backgroundRef.current.offsetHeight
-      // const normalizedVerticalMousePosition: number =
-      //   Math.abs(event.y / backgroundRef.current.offsetHeight - 0.5)
       gsap.to(blueSvg.current, {
         translateX: normalizedHorizontalMousePosition * 100 * -1,
         translateY: normalizedVerticalMousePosition * 100 * -1,
@@ -30,7 +26,6 @@ const HeroBackground = () => {
       gsap.to(purpleSvg.current, {
         translateX: normalizedHorizontalMousePosition * 100,
         translateY: normalizedVerticalMousePosition * 100,
-        // translateY: normalizedVerticalMousePosition * 100 * Math.sign(normalizedHorizontalMousePosition),
         ease: 'power3.out',
         duration: 0.3
       })
