@@ -1,5 +1,6 @@
 import React, { FC, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import svgUrl from '@/public/loop.svg'
 import styles from './LoopSvg.module.scss'
 
 const LoopSvg: FC = () => {
@@ -29,14 +30,7 @@ const LoopSvg: FC = () => {
     return () => ctx.revert()
   }, [])
 
-  return (
-    <img
-      ref={svg}
-      className={styles.loopShape}
-      src="src/public/loop.svg"
-      alt=""
-    />
-  )
+  return <img ref={svg} className={styles.loopShape} src={svgUrl} alt="" />
 }
 
 export default LoopSvg

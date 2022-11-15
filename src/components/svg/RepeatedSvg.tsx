@@ -1,5 +1,6 @@
 import React, { FC, useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
+import svgUrl from '@/public/shape repeated 1.svg'
 import styles from './RepeatedSvg.module.scss'
 
 const RepeatedSvg: FC = () => {
@@ -30,14 +31,7 @@ const RepeatedSvg: FC = () => {
     return () => animationContext.revert()
   }, [])
 
-  return (
-    <img
-      ref={svg}
-      className={styles.repeatedShape}
-      src="src/public/shape repeated 1.svg"
-      alt=""
-    />
-  )
+  return <img ref={svg} className={styles.repeatedShape} src={svgUrl} alt="" />
 }
 
 export default RepeatedSvg
