@@ -5,7 +5,7 @@ import * as path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'creative_resume',
+  base: '/creative_resume/',
   css: {
     preprocessorOptions: {
       scss: {
