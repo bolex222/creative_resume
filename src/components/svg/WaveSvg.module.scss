@@ -1,0 +1,14 @@
+.waveSvgWrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.waveSvg {
+  fill: $color-greyishWhite;
+  transform: rotate(180deg);
+  width: 300%;
+
+  path {
+    fill: $color-greyishWhite;
+  }
+}

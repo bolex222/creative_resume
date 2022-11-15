@@ -1,0 +1,51 @@
+@function getColumn($index) {
+  $mod: $index % 2;
+  @if ($mod > 0) {
+    @return $mod;
+  }
+  @return 2;
+}
+
+@mixin position {
+  @for $i from 1 to 4 {
+    &:nth-of-type(#{$i}) {
+      grid-column: #{getColumn($i)};
+      grid-row: #{$i};
+    }
+  }
+}
+
+.ExperienceSection {
+  position: relative;
+  min-height: 100%;
+  background-color: $color_blueish;
+}
+
+.articlesContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-inline: rem(20px);
+}
+
+@include medium_and_larger_viewport {
+  .headingContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: rem(68px);
+
+    h2 {
+      font-size: rem(180px);
+    }
+  }
+
+  .articlesContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    //grid-template-rows: repeat(3, auto);
+    padding-inline: rem(88px);
+
+    article {
+      @include position;
+    }
+  }
+}
