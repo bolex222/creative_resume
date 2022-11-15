@@ -1,8 +1,8 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { FC, useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import styles from './RepeatedSvg.module.scss'
 
-const RepeatedSvg = () => {
+const RepeatedSvg: FC = () => {
   const svg = useRef(null)
 
   useLayoutEffect(() => {

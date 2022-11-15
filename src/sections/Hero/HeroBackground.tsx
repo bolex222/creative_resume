@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { FC, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import BgSvgForGradient1 from '@/components/svg/BgSvgForGradient1'
 import BgSvgForGradient2 from '@/components/svg/BgSvgForGradient2'
@@ -6,7 +6,7 @@ import RepeatedSvg from '@/components/svg/RepeatedSvg'
 import LoopSvg from '@/components/svg/LoopSvg'
 import styles from '@/sections/Hero/HeroBackground.module.scss'
 
-const HeroBackground = () => {
+const HeroBackground: FC = () => {
   const backgroundRef = useRef<HTMLDivElement>(null)
   const blueSvg = useRef<SVGSVGElement>(null)
   const purpleSvg = useRef<SVGSVGElement>(null)

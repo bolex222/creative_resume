@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { FC, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
 import styles from './LetterFromTheBottom.module.scss'
@@ -9,7 +9,7 @@ type Props = {
   letterIndex: number
 }
 
-const LetterFromTheBottom = ({ letterIndex, children }: Props) => {
+const LetterFromTheBottom: FC<Props> = ({ letterIndex, children }) => {
   const letterSpan = useRef(null)
 
   useLayoutEffect(() => {

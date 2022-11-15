@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Color } from '@/type/globalTypes'
 
 import styles from './SectionHeading.module.scss'
@@ -20,7 +20,7 @@ const getClassNameDependingOnColor = (color: Color): string => {
   }
 }
 
-const SectionHeading = ({ color, heading, containerClassName }: Props) => {
+const SectionHeading: FC<Props> = ({ color, heading, containerClassName }) => {
   return (
     <div
       className={`${styles.sectionHeadingContainer} ${

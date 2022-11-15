@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Color } from '@/type/globalTypes'
 import SectionHeading from '@/components/text/SectionHeading/SectionHeading'
 import GrainyOverlay from '@/components/GrainyOverlay/GrainyOverlay'
-import styles from './AboutMeSection.module.scss'
 import FramedImage from '@/sections/AboutMeSection/FramedImage/FramedImage'
+import styles from './AboutMeSection.module.scss'
 
-const AboutMeSection = () => {
+const AboutMeSection: FC = () => {
   return (
     <section className={styles.aboutMeSection}>
       <GrainyOverlay />

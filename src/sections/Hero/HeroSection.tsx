@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import AnimatedText from '@/components/text/AnimatedText'
 import YearSvg from '@/components/svg/YearSvg'
 import HeroBackground from '@/sections/Hero/HeroBackground'
@@ -7,7 +7,7 @@ import AnimatedHeadline from '@/components/text/AnimatedHeadline'
 import styles from './HeroSection.module.scss'
 import GrainyOverlay from '@/components/GrainyOverlay/GrainyOverlay'
 
-const HeroSection = () => {
+const HeroSection: FC = () => {
   return (
     <section className={styles.hero_section}>
       <HeroBackground />

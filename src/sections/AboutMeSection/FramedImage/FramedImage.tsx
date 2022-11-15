@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styles from './FramedImage.module.scss'
 
-const FramedImage = () => {
+const FramedImage: FC = () => {
   return (
     <div className={styles.framesWrapper}>
       <img

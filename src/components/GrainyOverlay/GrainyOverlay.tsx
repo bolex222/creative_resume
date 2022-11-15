@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styles from './GrainyOverlay.module.scss'
 
-const GrainyOverlay = () => {
+const GrainyOverlay: FC = () => {
   return <div className={styles.grainyOverlayContainer} />
 }
 

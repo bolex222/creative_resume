@@ -1,8 +1,8 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { FC, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import styles from './YearSvg.module.scss'
 
-const YearSvg = () => {
+const YearSvg: FC = () => {
   const svg = useRef(null)
 
   useLayoutEffect(() => {

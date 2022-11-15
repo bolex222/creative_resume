@@ -1,9 +1,9 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { FC, useLayoutEffect, useRef } from 'react'
 import styles from './AnimatedHeadline.module.scss'
 import { gsap } from 'gsap'
 import Context = gsap.Context
 
-const AnimatedHeadline = () => {
+const AnimatedHeadline: FC = () => {
   const paragraphContentRef = useRef<HTMLSpanElement>(null)
 
   useLayoutEffect(() => {

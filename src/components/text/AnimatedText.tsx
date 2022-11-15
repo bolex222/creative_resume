@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styles from './AnimatedText.module.scss'
 import LetterFromTheBottom from './LetterFromTheBottom'
 
@@ -7,7 +7,7 @@ type Props = {
   className?: string
 }
 
-const AnimatedText = ({ text, className }: Props) => {
+const AnimatedText: FC<Props> = ({ text, className }) => {
   const arrayOfWord: Array<string> = text.split(' ')
   const matrixOfText: Array<Array<string>> = arrayOfWord.map((e) => e.split(''))
 
