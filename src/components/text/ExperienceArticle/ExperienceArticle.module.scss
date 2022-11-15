@@ -1,0 +1,37 @@
+.wrapper {
+  color: $color-greyishWhite;
+  margin-top: rem(60px);
+  font-family: 'Aventine', sans-serif;
+  font-weight: 500;
+}
+
+.heading {
+  font-size: rem(36px);
+  margin-bottom: rem(15px);
+  overflow: initial;
+}
+
+.paragraph {
+  font-size: rem(20px);
+  margin-top: 0;
+  overflow: initial;
+}
+
+.thematicBreak {
+  width: 100%;
+  color: $color-greyishWhite;
+}
+
+@include medium_and_larger_viewport {
+  .heading {
+    font-size: rem(64px);
+  }
+
+  .paragraph {
+    font-size: rem(36px);
+  }
+
+  .thematicBreak {
+    display: none;
+  }
+}

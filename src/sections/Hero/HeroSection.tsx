@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import AnimatedText from '@/components/text/AnimatedText'
 import YearSvg from '@/components/svg/YearSvg'
-import HeroBackground from '@/pages/home/Hero/HeroBackground'
+import HeroBackground from '@/sections/Hero/HeroBackground'
 import ScrollDownButton from '@/components/Buttons/ScrollDownButton'
+import AnimatedHeadline from '@/components/text/AnimatedHeadline'
 import styles from './HeroSection.module.scss'
+import GrainyOverlay from '@/components/GrainyOverlay/GrainyOverlay'
 
-const HeroSection = () => {
+const HeroSection: FC = () => {
   return (
     <section className={styles.hero_section}>
       <HeroBackground />
@@ -19,13 +21,10 @@ const HeroSection = () => {
             <YearSvg />
           </div>
         </h1>
-        <p className={styles.headline}>
-          French student looking to become a creative frontend developer
-        </p>
-        {/*year svg container for apparition animation*/}
+        <AnimatedHeadline />
         <ScrollDownButton />
       </div>
-      <div className={styles.grainyOverlayContainer} />
+      <GrainyOverlay />
     </section>
   )
 }

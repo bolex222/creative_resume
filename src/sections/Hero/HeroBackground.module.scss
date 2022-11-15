@@ -18,6 +18,7 @@
 
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: saturate(150%) blur(10rem);
+  -webkit-backdrop-filter: saturate(150%) blur(10rem);
   z-index: 2;
 }
 
@@ -45,14 +46,15 @@
 @include medium_and_larger_viewport {
   .blueSvg {
     position: absolute;
-    width: rem(746px);
-    height: rem(845px);
+    width: rem(1000px);
+    //height: rem(845px);
     left: rem(0px);
   }
 
   .purpleSvg {
-    width: rem(713px);
-    height: rem(632px);
-    bottom: rem(0px);
+    width: rem(1000px);
+    //height: rem(632px);
+    bottom: 50vh;
+    right: rem(-273px);
   }
 }

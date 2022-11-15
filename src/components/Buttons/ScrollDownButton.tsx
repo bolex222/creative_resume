@@ -1,9 +1,9 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { FC, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
 import styles from './ScrollDownButton.module.scss'
 
-function ScrollDownButton() {
+const ScrollDownButton: FC = () => {
   const buttonRef = useRef(null)
   const arrowRef = useRef(null)
 

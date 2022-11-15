@@ -1,0 +1,43 @@
+.bluishColor {
+  color: $color-blueish;
+
+  &:after {
+    background-color: $color-blueish;
+  }
+}
+
+.greyishColor {
+  color: $color-greyishWhite;
+
+  &:after {
+    background-color: $color-greyishWhite;
+  }
+}
+
+.greyishColor,
+.bluishColor {
+  &:after {
+    content: '';
+    height: rem(4px);
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: rem(18px);
+  }
+}
+
+.sectionHeading {
+  font-family: 'Aventine', sans-serif;
+  font-weight: 500;
+  font-size: rem(80px);
+
+  margin-top: rem(28px);
+  margin-bottom: 0;
+
+  position: relative;
+}
+
+.sectionHeadingContainer {
+  display: flex;
+  justify-content: center;
+}

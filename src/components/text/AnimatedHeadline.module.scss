@@ -1,0 +1,21 @@
+.headline {
+  display: none;
+  overflow-y: hidden;
+}
+
+.headlineContent {
+  display: inline-block;
+}
+
+@include medium_and_larger_viewport {
+  .headline {
+    display: inline;
+    font-family: 'Aventine', sans-serif;
+    font-weight: 500;
+    font-size: rem(29px);
+    color: $color-light;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}
