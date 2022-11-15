@@ -1,11 +1,12 @@
 import React, { FC } from 'react'
 import styles from './FramedImage.module.scss'
+import imageUrl from '@/public/000010 1.png'
 
 const FramedImage: FC = () => {
   return (
     <div className={styles.framesWrapper}>
       <img
-        src="/src/public/000010 1.png"
+        src={imageUrl}
         className={styles.framedImage}
         alt="photo of me holding a camera"
       />
