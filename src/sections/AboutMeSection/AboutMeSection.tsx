@@ -4,10 +4,11 @@ import SectionHeading from '@/components/text/SectionHeading/SectionHeading'
 import GrainyOverlay from '@/components/GrainyOverlay/GrainyOverlay'
 import FramedImage from '@/sections/AboutMeSection/FramedImage/FramedImage'
 import styles from './AboutMeSection.module.scss'
+import LocomotiveScrollSection from '@/locomotiveScroll/LocomotiveScrollSection'
 
 const AboutMeSection: FC = () => {
   return (
-    <section className={styles.aboutMeSection}>
+    <LocomotiveScrollSection className={styles.aboutMeSection}>
       <GrainyOverlay />
       <SectionHeading
         containerClassName={styles.sectionHeadingContainer}
@@ -25,7 +26,7 @@ const AboutMeSection: FC = () => {
         and my opinions.
       </p>
       <FramedImage />
-    </section>
+    </LocomotiveScrollSection>
   )
 }
 

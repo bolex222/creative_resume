@@ -6,16 +6,20 @@ type Props = {
   containerClassName?: string
   children: string
   thematicBreak?: boolean
+  scrollSpeed?: number
 }
 const ExperienceArticle: FC<Props> = ({
   heading,
   children,
   containerClassName,
-  thematicBreak = true
+  thematicBreak = true,
+  scrollSpeed = 1
 }) => {
   return (
     <>
       <article
+        data-scroll
+        data-scroll-speed={scrollSpeed}
         className={`${styles.wrapper} ${
           containerClassName ? containerClassName : ''
         }`}
