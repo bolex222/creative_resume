@@ -1,26 +1,23 @@
-import React, { FC, useLayoutEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import styles from './AnimatedHeadline.module.scss'
 import { gsap } from 'gsap'
-import Context = gsap.Context
+import useGsap from '@/GSAP/hook/useGsap'
 
 const AnimatedHeadline: FC = () => {
   const paragraphContentRef = useRef<HTMLSpanElement>(null)
 
-  useLayoutEffect(() => {
-    const animationContext: Context = gsap.context(() => {
-      gsap.fromTo(
-        paragraphContentRef.current,
-        { translateY: '150%' },
-        {
-          translateY: '0%',
-          duration: 0.5,
-          ease: 'power1.out',
-          delay: 1
-        }
-      )
-    })
-    return () => animationContext.revert()
-  }, [])
+  useGsap(() => {
+    gsap.fromTo(
+      paragraphContentRef.current,
+      { translateY: '150%' },
+      {
+        translateY: '0%',
+        duration: 0.5,
+        ease: 'power1.out',
+        delay: 1
+      }
+    )
+  })
 
   return (
     <p className={styles.headline}>

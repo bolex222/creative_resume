@@ -5,11 +5,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // I KNOW THERE ARE SOME TS IGNORE BUT IT SEEMS THAT LOCOMOTIVE SCROLL + DOM ISN'T SUPER WELL TYPED
 
 const useSetUpScrollTrigger = (
-  locoScrollRef: React.RefObject<LocomotiveScroll>
+  locoScrollRef: React.RefObject<LocomotiveScroll>,
+  scrollContainer: React.RefObject<HTMLElement>
 ) => {
   locoScrollRef.current?.on('scroll', ScrollTrigger.update)
 
-  ScrollTrigger.scrollerProxy('.loco_scroll', {
+  ScrollTrigger.scrollerProxy(scrollContainer.current, {
     scrollTop(value) {
       return arguments.length
         ? locoScrollRef.current?.scrollTo(value as ScrollToTarget, {
@@ -38,7 +39,8 @@ const useSetUpScrollTrigger = (
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   ScrollTrigger.addEventListener('refresh', () => locoScrollRef.current?.update)
-  ScrollTrigger.defaults({ scroller: '.loco_scroll' })
+  ScrollTrigger.defaults({ scroller: scrollContainer.current })
+  ScrollTrigger.refresh()
 }
 
 export default useSetUpScrollTrigger

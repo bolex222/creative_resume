@@ -1,20 +1,18 @@
-import React, { FC, useLayoutEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import { gsap } from 'gsap'
 import styles from './YearSvg.module.scss'
+import useGsap from '@/GSAP/hook/useGsap'
 
 const YearSvg: FC = () => {
   const svg = useRef(null)
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        svg.current,
-        { translateY: '150%' },
-        { translateY: 0, duration: 0.6, ease: 'power1.out', delay: 0.5 }
-      )
-    })
-    return () => ctx.revert()
-  }, [])
+  useGsap(() => {
+    gsap.fromTo(
+      svg.current,
+      { translateY: '150%' },
+      { translateY: 0, duration: 0.6, ease: 'power1.out', delay: 0.5 }
+    )
+  })
 
   return (
     <svg

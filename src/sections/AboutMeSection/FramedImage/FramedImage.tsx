@@ -2,35 +2,38 @@ import React, { FC, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import styles from './FramedImage.module.scss'
 import imageUrl from '@/public/000010 1.png'
+import useGsap from '@/GSAP/hook/useGsap'
 
 const FramedImage: FC = () => {
   const imageRef = useRef<HTMLImageElement | null>(null)
   const frame1Ref = useRef<HTMLImageElement | null>(null)
   const frame2Ref = useRef<HTMLImageElement | null>(null)
 
-  useLayoutEffect(() => {
+  useGsap(() => {
     const elemArray = [imageRef.current, frame1Ref.current, frame2Ref.current]
-    const gsapContext: gsap.Context = gsap.context(() => {
-      for (let i = 0; i < elemArray.length; i++) {
-        gsap.fromTo(
-          elemArray[i],
-          { rotate: `${-25 + (i + 1) * 6}deg` },
-          {
-            rotate: `${-5 + (i + 1) * 6}deg`,
-            duration: 5,
-            delay: 0.3,
-            stagger: 1,
-            scrollTrigger: {
-              trigger: imageRef.current,
-              start: 'top bottom',
-              end: 'bottom top',
-              scrub: i + 1
-            }
+    for (let i = 0; i < elemArray.length; i++) {
+      gsap.fromTo(
+        elemArray[i],
+        { rotate: `${-25 + (i + 1) * 6}deg` },
+        {
+          rotate: `${-5 + (i + 1) * 6}deg`,
+          duration: 5,
+          delay: 0.3,
+          stagger: 1,
+          scrollTrigger: {
+            trigger: imageRef.current,
+            start: 'top bottom',
+            end: 'bottom top',
+            markers: true,
+            scrub: i + 1
           }
-        )
-      }
-    })
-    return () => gsapContext.revert()
+        }
+      )
+    }
+  })
+
+  useLayoutEffect(() => {
+    // return () => gsapContext.revert()
   }, [])
 
   return (
