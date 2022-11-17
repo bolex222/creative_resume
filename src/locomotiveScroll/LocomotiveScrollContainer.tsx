@@ -1,19 +1,17 @@
-import React, { FC, useRef } from 'react'
-import useLocomotiveScroll from '@/locomotiveScroll/locomotiveScrollHook'
+import React, { FC } from 'react'
 import styles from './LocomotiveScrollContainer.module.scss'
-import useSetUpScrollTrigger from '@/GSAP/gsapScrollTrigger/useSetUpScrollTrigger'
 
 type Props = {
   children: React.ReactNode
 }
 const LocomotiveScrollContainer: FC<Props> = ({ children }) => {
-  const scrollContainer = useRef<HTMLDivElement>(null)
-  const locomotiveScroll = useLocomotiveScroll(scrollContainer)
+  // const scrollContainer = useRef<HTMLDivElement>(null)
+  // const locomotiveScroll = useLocomotiveScroll(scrollContainer)
 
   return (
     <div
-      ref={scrollContainer}
-      data-scroll-container
+      // ref={scrollContainer}
+      data-scroll-container={true}
       className={`loco_scroll ${styles.locomotiveScrollContainer}`}
       id="loco_scroll_container"
     >

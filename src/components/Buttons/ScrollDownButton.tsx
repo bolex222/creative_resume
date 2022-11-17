@@ -1,29 +1,27 @@
-import React, { FC, useLayoutEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import { gsap } from 'gsap'
 
 import styles from './ScrollDownButton.module.scss'
+import useGsap from '@/GSAP/hook/useGsap'
 
 const ScrollDownButton: FC = () => {
   const buttonRef = useRef(null)
   const arrowRef = useRef(null)
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const t1 = gsap.timeline()
-      t1.set(arrowRef.current, { opacity: 0, translateY: '-100%' })
-      t1.fromTo(
-        buttonRef.current,
-        { scale: 0 },
-        { scale: 1, duration: 0.6, delay: 1, ease: 'power1.out' }
-      )
-      t1.to(
-        arrowRef.current,
-        { opacity: 1, translateY: 0, duration: 0.6, ease: 'power1.out' },
-        '-=0.3'
-      )
-    })
-    return () => ctx.revert()
-  }, [])
+  useGsap(() => {
+    const t1 = gsap.timeline()
+    t1.set(arrowRef.current, { opacity: 0, translateY: '-100%' })
+    t1.fromTo(
+      buttonRef.current,
+      { scale: 0 },
+      { scale: 1, duration: 0.6, delay: 1, ease: 'power1.out' }
+    )
+    t1.to(
+      arrowRef.current,
+      { opacity: 1, translateY: 0, duration: 0.6, ease: 'power1.out' },
+      '-=0.3'
+    )
+  })
 
   return (
     <div className={styles.scrollCircleWrapper}>

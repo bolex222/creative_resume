@@ -9,9 +9,9 @@ const useLocomotiveScroll = (containerRef: React.RefObject<HTMLElement>) => {
     if (containerRef.current !== null) {
       LocomotiveScrollRef.current = new LocomotiveScroll({
         el: containerRef.current,
-        smooth: true
+        smooth: false
       })
-      useSetUpScrollTrigger(LocomotiveScrollRef)
+      useSetUpScrollTrigger(LocomotiveScrollRef, containerRef)
     }
   }, [])
   return [LocomotiveScrollRef]

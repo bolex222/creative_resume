@@ -1,7 +1,8 @@
-import React, { FC, useLayoutEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import { gsap } from 'gsap'
 
 import styles from './LetterFromTheBottom.module.scss'
+import useGsap from '@/GSAP/hook/useGsap'
 
 type Props = {
   className: string
@@ -12,18 +13,15 @@ type Props = {
 const LetterFromTheBottom: FC<Props> = ({ letterIndex, children }) => {
   const letterSpan = useRef(null)
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.to(letterSpan.current, {
-        translateY: '0',
-        rotate: '0',
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power1.out',
-        delay: letterIndex / 40
-      })
+  useGsap(() => {
+    gsap.to(letterSpan.current, {
+      translateY: '0',
+      rotate: '0',
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power1.out',
+      delay: letterIndex / 40
     })
-    return () => ctx.revert()
   })
 
   return (

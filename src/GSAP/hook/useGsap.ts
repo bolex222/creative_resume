@@ -1,7 +1,7 @@
 import { gsap } from 'gsap'
-import { useLayoutEffect } from 'react'
+import { EffectCallback, useLayoutEffect } from 'react'
 
-const useGsap = (gsapCallbackAnimation: gsap.ContextFunc): void => {
+const useGsap = (gsapCallbackAnimation: EffectCallback): void => {
   useLayoutEffect(() => {
     const gsapContext: gsap.Context = gsap.context(gsapCallbackAnimation)
     return () => gsapContext.revert()
