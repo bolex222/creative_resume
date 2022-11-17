@@ -24,7 +24,6 @@ const FramedImage: FC = () => {
             trigger: imageRef.current,
             start: 'top bottom',
             end: 'bottom top',
-            markers: true,
             scrub: i + 1
           }
         }
