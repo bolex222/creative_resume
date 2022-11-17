@@ -15,7 +15,11 @@ const AboutMeSection: FC = () => {
         heading="About me"
         color={Color.blueish}
       />
-      <p className={styles.aboutMeParagraph}>
+      <p
+        className={styles.aboutMeParagraph}
+        data-scroll={true}
+        data-scroll-speed={-1}
+      >
         <span>Hi !</span> I’m Basile, a French IT engineer student interested in
         creative frontend development. I am currently looking for a 6 months
         internship from January 2023 . I would like to find a company with an

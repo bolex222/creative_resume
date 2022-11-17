@@ -14,9 +14,9 @@ const FramedImage: FC = () => {
       for (let i = 0; i < elemArray.length; i++) {
         gsap.fromTo(
           elemArray[i],
-          { rotate: '-10deg' },
+          { rotate: `${-25 + (i + 1) * 6}deg` },
           {
-            rotate: '+10deg',
+            rotate: `${-5 + (i + 1) * 6}deg`,
             duration: 5,
             delay: 0.3,
             stagger: 1,
@@ -34,7 +34,11 @@ const FramedImage: FC = () => {
   }, [])
 
   return (
-    <div className={styles.framesWrapper}>
+    <div
+      className={styles.framesWrapper}
+      data-scroll={true}
+      data-scroll-speed={1}
+    >
       <img
         src={imageUrl}
         className={styles.framedImage}

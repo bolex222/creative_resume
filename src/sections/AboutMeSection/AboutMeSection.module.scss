@@ -5,6 +5,7 @@
   max-width: 100%;
   background-color: $color-greyishWhite;
   padding-bottom: rem(50px);
+  overflow-x: hidden;
 }
 
 .aboutMeParagraph {
@@ -48,5 +49,6 @@
 
     width: rem(783px);
     grid-column: 2/3;
+    padding-top: rem(50px);
   }
 }

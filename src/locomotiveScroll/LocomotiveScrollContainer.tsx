@@ -1,7 +1,7 @@
 import React, { FC, useRef } from 'react'
 import useLocomotiveScroll from '@/locomotiveScroll/locomotiveScrollHook'
 import styles from './LocomotiveScrollContainer.module.scss'
-import useSetUpScrollTrigger from '@/gsapScrollTrigger/useSetUpScrollTrigger'
+import useSetUpScrollTrigger from '@/GSAP/gsapScrollTrigger/useSetUpScrollTrigger'
 
 type Props = {
   children: React.ReactNode

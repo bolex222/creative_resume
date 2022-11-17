@@ -18,7 +18,7 @@ const ExperienceArticle: FC<Props> = ({
   return (
     <>
       <article
-        data-scroll
+        data-scroll={true}
         data-scroll-speed={scrollSpeed}
         className={`${styles.wrapper} ${
           containerClassName ? containerClassName : ''
