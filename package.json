@@ -13,11 +13,13 @@
   "dependencies": {
     "@types/node": "^18.11.9",
     "gsap": "^3.11.3",
+    "locomotive-scroll": "^4.1.4",
     "path": "^0.12.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@types/locomotive-scroll": "^4.1.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.42.0",

@@ -4,17 +4,22 @@ import SectionHeading from '@/components/text/SectionHeading/SectionHeading'
 import GrainyOverlay from '@/components/GrainyOverlay/GrainyOverlay'
 import FramedImage from '@/sections/AboutMeSection/FramedImage/FramedImage'
 import styles from './AboutMeSection.module.scss'
+import LocomotiveScrollSection from '@/locomotiveScroll/LocomotiveScrollSection'
 
 const AboutMeSection: FC = () => {
   return (
-    <section className={styles.aboutMeSection}>
+    <LocomotiveScrollSection className={styles.aboutMeSection}>
       <GrainyOverlay />
       <SectionHeading
         containerClassName={styles.sectionHeadingContainer}
         heading="About me"
         color={Color.blueish}
       />
-      <p className={styles.aboutMeParagraph}>
+      <p
+        className={styles.aboutMeParagraph}
+        data-scroll={true}
+        data-scroll-speed={-1}
+      >
         <span>Hi !</span> I’m Basile, a French IT engineer student interested in
         creative frontend development. I am currently looking for a 6 months
         internship from January 2023 . I would like to find a company with an
@@ -25,7 +30,7 @@ const AboutMeSection: FC = () => {
         and my opinions.
       </p>
       <FramedImage />
-    </section>
+    </LocomotiveScrollSection>
   )
 }
 

@@ -31,6 +31,8 @@ const SectionHeading: FC<Props> = ({ color, heading, containerClassName }) => {
         className={`${styles.sectionHeading} ${getClassNameDependingOnColor(
           color
         )}`}
+        data-scroll={true}
+        data-scroll-speed={1}
       >
         <span>{heading}</span>
       </h2>

@@ -3,7 +3,8 @@
 
   background-image: url('/src/public/grainyImage.png');
   mix-blend-mode: overlay;
-  background-size: cover;
+  background-size: auto;
+  background-repeat: repeat;
   top: 0;
   left: 0;
 
