@@ -1,4 +1,6 @@
-import React, { FC } from 'react'
+import React, { FC, useRef } from 'react'
+import { gsap } from 'gsap'
+import useGsap from '@/GSAP/hook/useGsap'
 import styles from './ExperienceArticle.module.scss'
 
 type Props = {
@@ -11,24 +13,49 @@ type Props = {
 const ExperienceArticle: FC<Props> = ({
   heading,
   children,
-  containerClassName,
-  thematicBreak = true,
-  scrollSpeed = 1
+  containerClassName
 }) => {
+  const articleRef = useRef<HTMLElement | null>(null)
+
+  useGsap(() => {
+    gsap.fromTo(
+      articleRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: articleRef.current,
+          start: 'top 75%'
+        }
+      }
+    )
+    gsap.fromTo(
+      articleRef.current,
+      { translateY: '-15%' },
+      {
+        translateY: '15%',
+        ease: 'power3.out,',
+        scrollTrigger: {
+          trigger: articleRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1
+        }
+      }
+    )
+  })
   return (
-    <>
-      <article
-        data-scroll={true}
-        data-scroll-speed={scrollSpeed}
-        className={`${styles.wrapper} ${
-          containerClassName ? containerClassName : ''
-        }`}
-      >
-        <h3 className={styles.heading}>{heading}</h3>
-        <p className={styles.paragraph}>{children}</p>
-      </article>
-      {thematicBreak ? <hr className={styles.thematicBreak} /> : ''}
-    </>
+    <article
+      ref={articleRef}
+      className={`${styles.wrapper} ${
+        containerClassName ? containerClassName : ''
+      }`}
+    >
+      <h3 className={styles.heading}>{heading}</h3>
+      <p className={styles.paragraph}>{children}</p>
+    </article>
   )
 }
 

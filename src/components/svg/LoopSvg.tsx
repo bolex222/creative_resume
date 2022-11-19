@@ -7,9 +7,22 @@ import useGsap from '@/GSAP/hook/useGsap'
 const LoopSvg: FC = () => {
   const svg = useRef(null)
 
-  /**
-   * Create and run apparition gsap animation
-   */
+  const parallaxScrollAnimation = (): void => {
+    gsap.fromTo(
+      svg.current,
+      { translateY: 0 },
+      {
+        translateY: '15%',
+        scrollTrigger: {
+          trigger: svg.current,
+          start: 'middle middle',
+          end: 'bottom top',
+          scrub: 2
+        }
+      }
+    )
+  }
+
   useGsap(() => {
     const t1 = gsap.timeline()
     t1.fromTo(
@@ -21,9 +34,10 @@ const LoopSvg: FC = () => {
       {
         translateX: '0%',
         translateY: '0%',
-        duration: 0.7,
+        duration: 1,
         delay: 0.8,
-        ease: 'power1.out'
+        ease: 'power3.out',
+        onComplete: parallaxScrollAnimation
       }
     )
   })

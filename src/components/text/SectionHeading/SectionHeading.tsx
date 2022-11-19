@@ -1,7 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, useRef } from 'react'
 import { Color } from '@/type/globalTypes'
 
 import styles from './SectionHeading.module.scss'
+import useGsap from '@/GSAP/hook/useGsap'
+import { gsap } from 'gsap'
 
 type Props = {
   containerClassName?: string
@@ -21,8 +23,28 @@ const getClassNameDependingOnColor = (color: Color): string => {
 }
 
 const SectionHeading: FC<Props> = ({ color, heading, containerClassName }) => {
+  const headingSpanRef = useRef<HTMLSpanElement | null>(null)
+  const headingRef = useRef<HTMLDivElement>(null)
+
+  useGsap(() => {
+    gsap.fromTo(
+      headingSpanRef.current,
+      { translateY: '150%' },
+      {
+        translateY: '0%',
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: headingSpanRef.current,
+          start: '+=100px bottom'
+        }
+      }
+    )
+  })
+
   return (
     <div
+      ref={headingRef}
       className={`${styles.sectionHeadingContainer} ${
         containerClassName ? containerClassName : ''
       }`}
@@ -31,10 +53,10 @@ const SectionHeading: FC<Props> = ({ color, heading, containerClassName }) => {
         className={`${styles.sectionHeading} ${getClassNameDependingOnColor(
           color
         )}`}
-        data-scroll={true}
-        data-scroll-speed={1}
       >
-        <span>{heading}</span>
+        <span className={styles.headingSpan} ref={headingSpanRef}>
+          {heading}
+        </span>
       </h2>
     </div>
   )

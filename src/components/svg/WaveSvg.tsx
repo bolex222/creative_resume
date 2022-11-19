@@ -13,7 +13,7 @@ const WaveSvg: FC = () => {
         trigger: svgRef.current,
         start: 'top bottom',
         end: 'bottom top',
-        scrub: true
+        scrub: 3
       }
     })
   })

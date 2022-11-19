@@ -22,7 +22,7 @@
     width: 100%;
     display: block;
     position: absolute;
-    bottom: rem(18px);
+    bottom: 0;
   }
 }
 
@@ -34,10 +34,23 @@
   margin-top: rem(28px);
   margin-bottom: 0;
 
+  height: calc(6rem - #{rem(18px)});
+
   position: relative;
 }
 
 .sectionHeadingContainer {
   display: flex;
   justify-content: center;
+  overflow-y: hidden;
+}
+
+.headingSpan {
+  display: inline-block;
+}
+
+@include medium_and_larger_viewport {
+  .sectionHeading {
+    height: calc(12rem - #{rem(18px)});
+  }
 }
