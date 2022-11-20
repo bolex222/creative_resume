@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react'
+import React, { FC, ReactNode, useRef } from 'react'
 import { gsap } from 'gsap'
 import useGsap from '@/GSAP/hook/useGsap'
 import styles from './ExperienceArticle.module.scss'
@@ -6,7 +6,7 @@ import styles from './ExperienceArticle.module.scss'
 type Props = {
   heading: string
   containerClassName?: string
-  children: string
+  children: ReactNode
   thematicBreak?: boolean
   scrollSpeed?: number
 }
@@ -54,7 +54,7 @@ const ExperienceArticle: FC<Props> = ({
       }`}
     >
       <h3 className={styles.heading}>{heading}</h3>
-      <p className={styles.paragraph}>{children}</p>
+      <div className={styles.paragraph}>{children}</div>
     </article>
   )
 }

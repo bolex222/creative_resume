@@ -1,0 +1,41 @@
+.studiesSection {
+  position: relative;
+
+  padding-inline: 1.25rem;
+
+  background-color: $color-blueish;
+  padding-bottom: rem(100px);
+}
+
+.articlesContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.headingContainer {
+}
+
+@include medium_and_larger_viewport {
+  .studiesSection {
+  }
+
+  .articlesContainer {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: rem(88px);
+
+    article {
+      @include position;
+    }
+  }
+
+  .headingContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: rem(68px);
+    grid-column: 1 / 3;
+
+    h2 {
+      font-size: rem(180px);
+    }
+  }
+}

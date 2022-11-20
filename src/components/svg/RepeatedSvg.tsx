@@ -10,7 +10,7 @@ const RepeatedSvg: FC = () => {
   const parallaxScrollAnimation = (): void => {
     gsap.fromTo(
       svg.current,
-      { translateY: 0 },
+      { translateY: 0, immediateRender: false },
       {
         translateY: '25%',
         scrollTrigger: {

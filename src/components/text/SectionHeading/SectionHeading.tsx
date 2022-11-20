@@ -36,7 +36,7 @@ const SectionHeading: FC<Props> = ({ color, heading, containerClassName }) => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: headingSpanRef.current,
-          start: '+=100px bottom'
+          start: '-=50% bottom'
         }
       }
     )

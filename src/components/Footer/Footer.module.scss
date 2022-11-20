@@ -1,0 +1,60 @@
+.footer {
+  position: relative;
+
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
+
+  background-color: $color-light;
+
+  font-family: 'Aventine', sans-serif;
+  font-weight: 500;
+}
+
+.buttonWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: rem(10px);
+  align-items: center;
+  padding-inline: rem(20px);
+  width: 100%;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.heading {
+  text-align: center;
+  font-size: rem(20px);
+}
+
+.locoscroll {
+  text-decoration: line-through;
+}
+
+.list {
+}
+
+.listItem {
+  text-align: center;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.linksListWrapper {
+}
+
+.projectListWrapper {
+}
+
+@include medium_and_larger_viewport {
+  .contentWrapper {
+    margin-top: rem(100px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
