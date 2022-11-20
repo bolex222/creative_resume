@@ -1,0 +1,30 @@
+.downloadButton {
+  padding-inline: rem(16px);
+  padding-top: rem(8px);
+  padding-bottom: rem(8px);
+
+  border-radius: 20rem;
+  border: solid 1px $color_dark;
+
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  width: rem(335px);
+  margin-inline: auto;
+}
+
+.textWrapper {
+  font-size: rem(20px);
+  height: rem(20px);
+  mix-blend-mode: difference;
+  color: white;
+}
+
+.hoverCircle {
+  position: absolute;
+  height: 50rem;
+  width: 50rem;
+  background-color: $color_dark;
+  border-radius: 100%;
+}

@@ -16,3 +16,11 @@
   }
   @return px2em($px, 'rem');
 }
+
+@function getColumn($index) {
+  $mod: $index % 2;
+  @if ($mod > 0) {
+    @return $mod;
+  }
+  @return 2;
+}

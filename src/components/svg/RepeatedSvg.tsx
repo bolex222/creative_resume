@@ -5,7 +5,23 @@ import styles from './RepeatedSvg.module.scss'
 import useGsap from '@/GSAP/hook/useGsap'
 
 const RepeatedSvg: FC = () => {
-  const svg = useRef(null)
+  const svg = useRef<HTMLImageElement | null>(null)
+
+  const parallaxScrollAnimation = (): void => {
+    gsap.fromTo(
+      svg.current,
+      { translateY: 0, immediateRender: false },
+      {
+        translateY: '25%',
+        scrollTrigger: {
+          trigger: svg.current,
+          start: 'middle middle',
+          end: 'bottom top',
+          scrub: 1
+        }
+      }
+    )
+  }
 
   useGsap(() => {
     const animationTimeline = gsap.timeline()
@@ -24,7 +40,13 @@ const RepeatedSvg: FC = () => {
     animationTimeline.fromTo(
       svg.current,
       { translateX: '-30%' },
-      { translateY: '0%', duration: 0.8, delay: 0.7, ease: 'power3.out' },
+      {
+        translateY: '0%',
+        duration: 0.8,
+        delay: 0.7,
+        ease: 'power3.out',
+        onComplete: parallaxScrollAnimation
+      },
       0
     )
   })

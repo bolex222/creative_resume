@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 100%;
   background-color: $color-greyishWhite;
-  padding-bottom: rem(50px);
+  padding-bottom: rem(120px);
   overflow-x: hidden;
 }
 
@@ -38,6 +38,7 @@
     height: max-content;
     justify-content: start;
     padding-left: rem(60px);
+    margin-bottom: rem(100px);
 
     h2 {
       font-size: rem(180px);
