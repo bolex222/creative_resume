@@ -37,11 +37,11 @@ const ExperienceSection: FC = () => {
         containerClassName={styles.headingContainer}
       />
       <div className={styles.articlesContainer}>
-        <ExperienceArticle heading="Superhero Cheesecake / Mediamonks">
+        <ExperienceArticle heading="Superhero Cheesecake Mediamonks">
           <p>
             In 2021-2022 I did a 5 months internship at Superhero Cheesecake in
             Amsterdam as a frontend developer (Nextjs, VueJs, Gsap, SCSS).
-            during the internship I worked on traineeships.monks.com.
+            During the internship I worked on traineeships.monks.com.
           </p>
         </ExperienceArticle>
         <ExperienceArticle heading="Internship at Phenix Info">

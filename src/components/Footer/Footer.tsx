@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import DownloadResumeLink from '@/components/Buttons/DownloadResumeLink/DownloadResumeLink'
+import AnimatedLink from '@/components/Buttons/AnimatedLink/AnimatedLink'
 import GrainyOverlay from '@/components/GrainyOverlay/GrainyOverlay'
 import resumeLink from '@/public/resume.pdf'
 
@@ -10,12 +10,12 @@ const Footer: FC = () => {
     <footer className={styles.footer}>
       <GrainyOverlay />
       <div className={styles.buttonWrapper}>
-        <DownloadResumeLink link={resumeLink} download={true}>
+        <AnimatedLink link={resumeLink} download={true}>
           Download pdf resume
-        </DownloadResumeLink>
-        <DownloadResumeLink link="https://github.com/bolex222/creative_resume">
+        </AnimatedLink>
+        <AnimatedLink link="https://github.com/bolex222/creative_resume">
           This project github repo
-        </DownloadResumeLink>
+        </AnimatedLink>
       </div>
       <div className={styles.contentWrapper}>
         <div className={styles.linksListWrapper}>

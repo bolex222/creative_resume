@@ -4,7 +4,6 @@ import SectionHeading from '@/components/text/SectionHeading/SectionHeading'
 import GrainyOverlay from '@/components/GrainyOverlay/GrainyOverlay'
 import FramedImage from '@/sections/AboutMeSection/FramedImage/FramedImage'
 import styles from './AboutMeSection.module.scss'
-import LocomotiveScrollSection from '@/locomotiveScroll/LocomotiveScrollSection'
 import useGsap from '@/GSAP/hook/useGsap'
 import { gsap } from 'gsap'
 
@@ -28,7 +27,7 @@ const AboutMeSection: FC = () => {
   })
 
   return (
-    <LocomotiveScrollSection className={styles.aboutMeSection}>
+    <section id="aboutme" className={styles.aboutMeSection}>
       <GrainyOverlay />
       <SectionHeading
         containerClassName={styles.sectionHeadingContainer}
@@ -46,7 +45,7 @@ const AboutMeSection: FC = () => {
         opinions.
       </p>
       <FramedImage />
-    </LocomotiveScrollSection>
+    </section>
   )
 }
 

@@ -22,6 +22,10 @@
 .contentWrapper {
   display: grid;
   grid-template-columns: 1fr;
+
+  ul {
+    padding: 0;
+  }
 }
 
 .heading {

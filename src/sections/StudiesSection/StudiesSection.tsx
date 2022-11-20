@@ -37,10 +37,13 @@ const StudiesSection: FC = () => {
       <div className={styles.articlesContainer}>
         <ExperienceArticle heading="CESI ENGINEERING SCHOOL">
           <ul>
-            <li>5th and last year of computer engineering training</li>
+            <li>
+              5th and last year of computer science engineering degree (last
+              year of Master degree)
+            </li>
             <li>
               Learned : Development, Networking, System administration, Project
-              managment.
+              management.
             </li>
           </ul>
         </ExperienceArticle>

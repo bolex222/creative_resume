@@ -1,5 +1,5 @@
 import React, { FC, MouseEvent, useRef } from 'react'
-import styles from './DownloadResumeButton.module.scss'
+import styles from './AnimatedLink.module.scss'
 import useGsap from '@/GSAP/hook/useGsap'
 import { gsap } from 'gsap'
 
@@ -9,11 +9,7 @@ type Props = {
   children: React.ReactNode
 }
 
-const DownloadResumeLink: FC<Props> = ({
-  link,
-  download = false,
-  children
-}) => {
+const AnimatedLink: FC<Props> = ({ link, download = false, children }) => {
   const linkRef = useRef<HTMLAnchorElement>(null)
   const circleRef = useRef<HTMLDivElement>(null)
   const gsapTimeline = useRef<gsap.core.Timeline | null>(null)
@@ -63,4 +59,4 @@ const DownloadResumeLink: FC<Props> = ({
   )
 }
 
-export default DownloadResumeLink
+export default AnimatedLink
