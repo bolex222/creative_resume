@@ -33,9 +33,6 @@
   text-decoration: line-through;
 }
 
-.list {
-}
-
 .listItem {
   text-align: center;
 
@@ -46,15 +43,9 @@
   }
 }
 
-.linksListWrapper {
-}
-
-.projectListWrapper {
-}
-
 @include medium_and_larger_viewport {
   .contentWrapper {
     margin-top: rem(100px);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }

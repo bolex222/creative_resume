@@ -25,7 +25,7 @@ const Footer: FC = () => {
               <a href="https://github.com/bolex222">My Github</a>
             </li>
             <li className={styles.listItem}>
-              <a href="https://www.linkedin.com/in/blecout/">My Linkdin</a>
+              <a href="https://www.linkedin.com/in/blecout/">My Linkedin</a>
             </li>
             <li className={styles.listItem}>
               <a href="https://www.instagram.com/basile_lecout/">My Photos</a>
@@ -38,7 +38,7 @@ const Footer: FC = () => {
           </ul>
         </div>
         <div className={styles.projectList}>
-          <h5 className={styles.heading}>This resume have been made with</h5>
+          <h5 className={styles.heading}>This resume has been made with</h5>
           <ul>
             <li className={styles.listItem}>React, Typescript, Vitejs</li>
             <li className={styles.listItem}>
@@ -51,6 +51,21 @@ const Footer: FC = () => {
               </span>
             </li>
             <li className={styles.listItem}>Figma, illustrator</li>
+          </ul>
+        </div>
+        <div className={styles.projectList}>
+          <h5 className={styles.heading}>Credits</h5>
+          <ul>
+            <li className={styles.listItem}>
+              <a href="https://thenounproject.com/icon/resume-1602678/">
+                favicon by joeartcon
+              </a>
+            </li>
+            <li className={styles.listItem}>
+              <a href="https://www.behance.net/stephenfrenchjr">
+                font by Stephen French
+              </a>
+            </li>
           </ul>
         </div>
       </div>
