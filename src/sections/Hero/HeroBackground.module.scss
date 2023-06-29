@@ -19,6 +19,7 @@
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: saturate(150%) blur(10rem);
   -webkit-backdrop-filter: saturate(150%) blur(10rem);
+  will-change: backdrop-filter;
   z-index: 2;
 }
 
