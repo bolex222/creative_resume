@@ -26,8 +26,6 @@ const AnimatedLink: FC<Props> = ({ link, download = false, children }) => {
   const handleMouseEnter = (event: MouseEvent) => {
     if (circleRef.current && linkRef.current && gsapTimeline.current) {
       const linkBounding = linkRef.current.getBoundingClientRect()
-      console.log(event.clientX - linkBounding.x)
-      console.log(event.clientY - linkBounding.y)
       circleRef.current.style.left = `calc(${
         event.clientX - linkBounding.x
       }px - (25rem))`

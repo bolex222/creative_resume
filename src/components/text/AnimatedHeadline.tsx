@@ -22,7 +22,8 @@ const AnimatedHeadline: FC = () => {
   return (
     <p className={styles.headline}>
       <span className={styles.headlineContent} ref={paragraphContentRef}>
-        French student looking to become a creative frontend developer
+        French junior developer looking to become a creative front-end
+        developer.
       </span>
     </p>
   )

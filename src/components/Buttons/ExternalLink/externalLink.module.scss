@@ -1,0 +1,28 @@
+.externalLink {
+  position: relative;
+  width: fit-content;
+  &:hover {
+    .underline {
+      height: 100%;
+    }
+  }
+}
+
+.linkLabel {
+  z-index: 2;
+  white-space: nowrap;
+  //line-break: ;
+}
+
+.underline {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  z-index: 1;
+  background-color: #fff;
+  transform-origin: bottom;
+  bottom: 4px;
+  left: 0;
+  transition: height 0.3s ease-in-out;
+  mix-blend-mode: difference;
+}

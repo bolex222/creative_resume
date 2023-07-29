@@ -35,15 +35,15 @@ const StudiesSection: FC = () => {
         containerClassName={styles.headingContainer}
       />
       <div className={styles.articlesContainer}>
-        <ExperienceArticle heading="CESI ENGINEERING SCHOOL">
+        <ExperienceArticle heading="Graduated IT Engineer">
           <ul>
             <li>
-              5th and last year of computer science engineering degree (last
-              year of Master degree)
+              In 2023, I graduated from the CESI IT engineering school in
+              France. (5 years)
             </li>
             <li>
               Learned : Development, Networking, System administration, Project
-              management.
+              management, Cyber security and more.
             </li>
           </ul>
         </ExperienceArticle>

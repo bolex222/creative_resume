@@ -35,14 +35,18 @@ const AboutMeSection: FC = () => {
         color={Color.blueish}
       />
       <p className={styles.aboutMeParagraph} ref={paragraphRef}>
-        <span>Hi !</span> I’m Basile, a French IT engineer student interested in
-        creative frontend development. I am currently looking for a 6 months
-        internship from January 2023 . I would like to find a company with an
-        organized development and creative team. Passionate by web development
-        and its technologies, I would enjoy to work on current web technologies
-        and discover some new tools, languages, framework, and projects
-        architectures. I am curious and I am not afraid of giving ideas and my
-        opinions.
+        <span>Hi !</span> I&apos;m Basile, a French IT engineer with a passion
+        for creative frontend development. I recently graduated from CESI IT
+        engineering school in France, and I am now looking for a full-time
+        position. I am a highly motivated and results-oriented individual with a
+        strong desire to learn and grow. I am also a team player and I am always
+        willing to help others. I am passionate about using my skills and
+        knowledge to create innovative and user-friendly web applications. I am
+        also proficient in a variety of front-end technologies, including React,
+        NextJs, Vue, Gsap, Sass, and beginner with ThreeJs. I am confident that
+        I have the skills and experience necessary to be successful in a
+        front-end development role. I am eager to start working on challenging
+        and rewarding projects.
       </p>
       <FramedImage />
     </section>

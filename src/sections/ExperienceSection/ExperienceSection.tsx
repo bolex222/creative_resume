@@ -7,6 +7,7 @@ import ExperienceArticle from '@/components/text/ExperienceArticle/ExperienceArt
 import useGsap from '@/GSAP/hook/useGsap'
 import { gsap } from 'gsap'
 import styles from './Experience.module.scss'
+import ExternalLink from '@/components/Buttons/ExternalLink/ExternalLink'
 
 const ExperienceSection: FC = () => {
   const sectionRef = useRef<HTMLElement>(null)
@@ -37,11 +38,30 @@ const ExperienceSection: FC = () => {
         containerClassName={styles.headingContainer}
       />
       <div className={styles.articlesContainer}>
+        <ExperienceArticle heading="Your Majesty">
+          <p>
+            From February to July 2023, I completed a 6-month internship at Your
+            Majesty as a creative front-end developer. During my time there, I
+            worked on various projects, including{' '}
+            <ExternalLink
+              href={'https://impact.otrium.com/'}
+              label={"Otrium's sustainability report"}
+            />
+            , where I utilized technologies such as Nuxtjs. Additionally, I
+            contributed to a bunch of projects utilizing my skills in front-end
+            frameworks and tools like Nextjs, Gsap, and StoryBlok.
+          </p>
+        </ExperienceArticle>
         <ExperienceArticle heading="Superhero Cheesecake Mediamonks">
           <p>
             In 2021-2022 I did a 5 months internship at Superhero Cheesecake in
             Amsterdam as a frontend developer (Nextjs, VueJs, Gsap, SCSS).
-            During the internship I worked on traineeships.monks.com.
+            During the internship I worked on{' '}
+            <ExternalLink
+              href={'https://traineeships.monks.com'}
+              label={'traineeships.monks.com'}
+            />
+            .
           </p>
         </ExperienceArticle>
         <ExperienceArticle heading="Internship at Phenix Info">

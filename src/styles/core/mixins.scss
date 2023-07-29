@@ -9,7 +9,7 @@
 }
 
 @mixin position {
-  @for $i from 1 to 4 {
+  @for $i from 1 to 5 {
     &:nth-of-type(#{$i}) {
       grid-column: #{getColumn($i)};
       grid-row: #{$i};
